@@ -7,7 +7,13 @@
   <packaging>pom</packaging>
   <name>jsf-learning</name>
   <modules>
-    <module>jsf-api</module>
-    <module>jsf-web</module>
+    <module>jsf-project</module>
+    <module>jsf-spring-security</module>
+    <module>jsf-eclipselink-spring-data</module>
+    <module>jsf-eclipselink</module>
+    <module>jsf-email</module>
+    <module>jsf-google-guava</module>
+    <module>jsf-cronjob</module>
+    <module>jsf-international-language</module>
   </modules>
 </project>
