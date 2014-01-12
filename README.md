@@ -14,3 +14,7 @@ javaserver faces learning project
 8. jsf-ecliselink (ORM : Object Relational Mapping)
 9. jsf-ecliselink-spring-data (JPQL)
 10. jsf-project (integrate project)
+
+
+ถ้าภาษาไทยก็ตาม tutorial นี้น่ะครับ
+http://na5cent.blogspot.com/p/tutorials.html
