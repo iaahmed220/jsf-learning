@@ -15,5 +15,7 @@
     <module>jsf-google-guava</module>
     <module>jsf-cronjob</module>
     <module>jsf-international-language</module>
+    <module>maven-profile</module>
+    <module>jsf-primefaces</module>
   </modules>
 </project>
