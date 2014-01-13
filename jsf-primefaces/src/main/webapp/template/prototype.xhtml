@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>JSF Learning</title>
+        <style type="text/css">
+            .nc-clear{
+                clear: both;
+            }
+
+            .nc-enable-slimscroll {
+                overflow: auto;
+            }
+
+            .nc-enable-slimscroll::-webkit-scrollbar {
+                width: 12px;
+                height: 12px;
+                background-color: #fafafa;
+            }
+
+            .nc-enable-slimscroll::-webkit-scrollbar-track {
+                background-color: #ddd;
+            }
+
+            .nc-enable-slimscroll::-webkit-scrollbar-thumb {
+                background-color: #999;
+                box-shadow: inset 0 0 3px #888; 
+                -moz-box-shadow: inset 0 0 3px #888; 
+                -webkit-box-shadow: inset 0 0 3px #888; 
+            }
+
+            .nc-enable-slimscroll::-webkit-scrollbar-thumb:hover{
+                background: #888;
+                box-shadow: inset 0 0 3px #777; 
+                -moz-box-shadow: inset 0 0 3px #777; 
+                -webkit-box-shadow: inset 0 0 3px #777;
+            } 
+
+            .nc-enable-slimscroll::-webkit-scrollbar-thumb:active {
+                background: #777;
+                box-shadow: inset 0 0 3px #666; 
+                -moz-box-shadow: inset 0 0 3px #666; 
+                -webkit-box-shadow: inset 0 0 3px #666;
+            } 
+
+            #nc_toolbar{
+                height: 32px;
+                background : #fff;
+                position: fixed;
+                top : 0;
+                left : 0;
+                width : 100%;
+                z-index: 100;
+                border-bottom: 1px solid #ddd;
+                box-shadow: 0 0 3px #ddd;
+            }
+
+            #nc_startup{
+                background-color: #3297fd;
+                height: 32px;
+                width : 32px;
+            }
+
+            #nc_login{
+                font-weight: bold;
+                position: absolute;
+                right : 10px;
+                top : 7px;
+            }
+
+            #nc_wrapper{
+                width : 1000px;
+                min-height: 600px;
+                background-color: #fff;
+                border : solid #eee;
+                border-width: 0px 1px 1px 1px;
+                position : relative;
+                left : 50%;
+                margin-left: -500px;
+                box-shadow: 0 0 3px #eee;
+                -moz-box-shadow: 0 0 3px #eee;
+                -webkit-box-shadow: 0 0 3px #eee;
+                margin-top: 33px;
+                margin-bottom: 33px;
+                display: table;
+            }
+
+            body{
+                margin: 0;
+                padding: 0;
+                background-color: #fafafa;
+                font-family: arial,sans-serif;
+                font-size: 10pt;
+                color : #444;
+            }
+        </style>
+        <ui:insert name="stylesheet"/>
+    </h:head>
+    <h:body styleClass="nc-enable-slimscroll">
+        <div id="nc_toolbar">
+            <div id="nc_startup"></div>
+            <div id="nc_login">redcrow</div>
+        </div>
+        <div id="nc_wrapper">
+            <ui:insert name="wrapper"/>
+        </div>
+    </h:body>
+</html>
+

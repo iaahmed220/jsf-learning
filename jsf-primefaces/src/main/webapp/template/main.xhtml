@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:composition template="/template/prototype.xhtml" 
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui" 
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="stylesheet">
+        <style type="text/css">
+            #nc_sidebar{
+                width : 200px;
+                border-right: 1px solid #eee;
+                border-bottom: 1px solid #eee;
+                display: table-cell;
+                height: auto;
+                position: relative;
+                background-color: #fcfcfc;
+            }
+
+            #nc_content{
+                border-bottom: 1px solid #eee;
+                display: table-cell;
+                width: 800px;
+            }
+
+            #nc_footer{
+                height: 100px;
+                display: table-row;
+                width: 100%;
+            }
+        </style>
+    </ui:define>
+
+    <ui:define name="wrapper">
+        <div id="nc_sidebar">
+            <ui:insert name="sidebar"/>
+        </div>
+        <div id="nc_content">
+            <ui:insert name="content"/>
+        </div>
+        <div id="nc_footer">
+            <ui:insert name="footer"/>
+        </div>
+    </ui:define>
+</ui:composition>
