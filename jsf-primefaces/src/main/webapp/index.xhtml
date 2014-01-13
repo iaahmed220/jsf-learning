@@ -10,7 +10,107 @@
     </ui:define>
 
     <ui:define name="content">
-        my content
+        <style type="text/css">
+            #nc_content{
+                padding: 10px;
+            }
+        </style>
+
+        <h1>staff management</h1>
+        <h:form id="staffList" prependId="false">
+
+            <p:commandButton value="add staff" 
+                             update=":addForm"
+                             actionListener="#{staffController.createStaff()}"
+                             onclick="addStaffWidgetDialog.show();"/>
+            <br/>
+            <br/>
+            <p:dataTable value="#{staffController.staffs}"
+                         rowIndexVar="counter"
+                         var="staff">
+                <p:column headerText="no" width="2%">
+                    #{counter + 1}
+                </p:column>
+
+                <p:column headerText="name">
+                    #{staff.name}
+                </p:column>
+
+                <p:column headerText="username">
+                    #{staff.username}
+                </p:column>
+
+                <p:column headerText="address">
+                    #{staff.address}
+                </p:column>
+
+                <p:column headerText="action" width="10%">
+                    <p:commandButton value="delete"
+                                     actionListener="#{staffController.onSelectStaff()}"
+                                     update=":deleteForm"
+                                     oncomplete="deleteStaffWidgetDialog.show();">
+                        <f:param name="username" value="#{staff.username}"/>
+                    </p:commandButton>
+                </p:column>
+            </p:dataTable>
+        </h:form>
+
+
+
+        <p:dialog header="add staff"
+                  id="addStaffDialog"
+                  widgetVar="addStaffWidgetDialog"
+                  modal="true"
+                  resizable="false"
+                  closable="true"
+                  draggable="false"
+                  width="400">
+            <h:form id="addForm" prependId="false">
+                <h:panelGrid columns="2">
+                    <h:outputText value="name"/>
+                    <p:inputText value="#{staffController.newStaff.name}"/>
+
+                    <h:outputText value="username"/>
+                    <p:inputText value="#{staffController.newStaff.username}"/>
+
+                    <h:outputText value="address"/>
+                    <p:inputText value="#{staffController.newStaff.address}"/>
+                </h:panelGrid>
+                <br/>
+                <p:commandButton value="add" 
+                                 update=":staffList"
+                                 actionListener="#{staffController.onAddStaff()}"
+                                 oncomplete="addStaffWidgetDialog.hide();"/>
+                <p:spacer width="10"/>
+                <p:commandButton value="cancel"
+                                 type="button"
+                                 onclick="addStaffWidgetDialog.hide();"/>
+            </h:form>
+        </p:dialog>
+
+
+        <p:dialog header="delete staff"
+                  id="deleteStaffDialog"
+                  widgetVar="deleteStaffWidgetDialog"
+                  modal="true"
+                  resizable="false"
+                  closable="true"
+                  draggable="false"
+                  width="400">
+            <h:form id="deleteForm" prependId="false">
+                <h:outputText value="delete name #{staffController.newStaff.name} ?"/>
+                <br/>
+                <br/>
+                <p:commandButton value="delete" 
+                                 update=":staffList"
+                                 actionListener="#{staffController.onDelete()}"
+                                 oncomplete="deleteStaffWidgetDialog.hide();"/>
+                <p:spacer width="10"/>
+                <p:commandButton value="cancel"
+                                 type="button"
+                                 onclick="deleteStaffWidgetDialog.hide();"/>
+            </h:form>
+        </p:dialog>
     </ui:define>
 
     <ui:define name="footer">

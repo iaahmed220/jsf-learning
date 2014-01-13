@@ -5,7 +5,8 @@
                 xmlns:p="http://primefaces.org/ui" 
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:f="http://java.sun.com/jsf/core">
-    <ui:define name="stylesheet">
+
+    <ui:define name="wrapper">
         <style type="text/css">
             #nc_sidebar{
                 width : 200px;
@@ -29,9 +30,7 @@
                 width: 100%;
             }
         </style>
-    </ui:define>
 
-    <ui:define name="wrapper">
         <div id="nc_sidebar">
             <ui:insert name="sidebar"/>
         </div>
