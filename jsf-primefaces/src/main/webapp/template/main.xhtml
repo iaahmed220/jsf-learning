@@ -16,12 +16,17 @@
                 height: auto;
                 position: relative;
                 background-color: #fcfcfc;
+                padding: 10px;
             }
 
             #nc_content{
                 border-bottom: 1px solid #eee;
                 display: table-cell;
                 width: 800px;
+            }
+            
+            #nc_sidebar_content{
+                position: absolute;
             }
 
             #nc_footer{
@@ -32,7 +37,9 @@
         </style>
 
         <div id="nc_sidebar">
-            <ui:insert name="sidebar"/>
+            <div id="nc_sidebar_content">
+                <ui:insert name="sidebar"/>
+            </div>
         </div>
         <div id="nc_content">
             <ui:insert name="content"/>
